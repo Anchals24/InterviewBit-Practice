@@ -12,11 +12,7 @@ You can pick first four elements or can pick last four elements or can pick 1 fr
 You need to return the maximum possible sum of elements you can pick.
 """
 
-class Solution:
-    # @param A : list of integers
-    # @param B : integer
-    # @return an integer
-    def solve(self, A, B):
+def solve(self, A, B):
         leng = len(A)
         #Finding the prefix first.
         prefix_sum = [0 for i in range(leng+1)]
@@ -47,7 +43,6 @@ class Solution:
         if suffix_sum[B- 1] > summ:
             summ = suffix_sum[B- 1]
         return summ
-
 
 def solve(self, A, B):
         arr = A[: B]
