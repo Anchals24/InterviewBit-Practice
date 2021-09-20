@@ -12,27 +12,11 @@ for i in range(l):
                 maxi = max(maxi , s)
 print(maxi)
 
-#Solution 2: Brute-Force O(n**2)
-
-import math
-A = [1, 2, 3]
-l = len(A)
-D = {}
-max_sum = -math.inf
-for a in range(l):
-    for b in range(a+1 , l):
-        if A[a] < A[b]:
-            D[A[a] + A[b]] = (a , b)
-Key = D.keys()
-Keys = list(Key)
-for c in range(2 , l):
-    for k in Keys:
-        maxi = max(D[k])
-        if c > maxi:
-            if A[c] > A[D[k][1]]:
-                summ = k + A[c]
-                max_sum = max(max_sum , summ)
-print(max_sum)
+#Approach2 : optimized approach
+""" 
+>> Consider every element as a mid element in the list.
+>> 
+"""
 
 from bisect import bisect_left
 import math
