@@ -1,3 +1,4 @@
+#Topic : Array
 #Pick from both sides!
 """ 
 Problem Description :
